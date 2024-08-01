@@ -29,6 +29,16 @@ app.get('/',(req,res)=>{
 
 });
 
+
+app.get('/api/kitchen', async (req, res) => {
+  try {
+    const kitchenItems = await Image.find({ category: 'kitchen' });
+    res.json(kitchenItems);
+  } catch (error) {
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
 app.post('/IhdUploadImg', async (req, res) => {
     const { name, description, category, image } = req.body;
 
