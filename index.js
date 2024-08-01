@@ -5,7 +5,7 @@ const cors = require('cors');
 
 
 const app = express();
-app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.json({ limit: '4.5mb' }));
 app.use(cors());
 
 mongoose.connect('mongodb+srv://ppalgaming2211:S0222p@cluster0.4z6qi4v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
