@@ -2,8 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const dotenv = require('dotenv');
-dotenv.config();
+
 
 const app = express();
 app.use(bodyParser.json({ limit: '50mb' }));
@@ -22,7 +21,7 @@ const imageSchema = new mongoose.Schema({
 });
 
 const Image = mongoose.model('Image', imageSchema);
-const PORT = process.env.PORT || 5000;
+const PORT =  5000;
 
 app.get('/',(req,res)=>{
  
